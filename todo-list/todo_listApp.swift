@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct todo_listApp: App {
+    // Create an instance of TodoListViewModel
+    let viewModel = TodoListViewModel()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            // Pass the viewModel to ContentView
+            ContentView(viewModel: viewModel)
         }
     }
 }
