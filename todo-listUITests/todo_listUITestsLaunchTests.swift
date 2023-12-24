@@ -8,7 +8,6 @@
 import XCTest
 
 final class todo_listUITestsLaunchTests: XCTestCase {
-
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
     }

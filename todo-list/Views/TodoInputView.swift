@@ -18,10 +18,10 @@ struct TodoInputView: View {
                 .padding(.horizontal)
 
             Button(action: {
-                            addTodo(newTodo)  // Call the closure with the current newTodo value
-                        }) {
-                            Text("Add")
-                        }
+                addTodo(newTodo) // Call the closure with the current newTodo value
+            }) {
+                Text("Add")
+            }
             .padding(.horizontal)
         }
         .padding(20)

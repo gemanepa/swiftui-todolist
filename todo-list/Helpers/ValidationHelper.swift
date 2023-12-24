@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ValidationHelper {
+enum ValidationHelper {
     static func isValidTodo(_ todoTitle: String, existingTodos: [TodoItem]) -> Bool {
         // Minimum Length Check
         guard todoTitle.count >= 3 else { return false }
