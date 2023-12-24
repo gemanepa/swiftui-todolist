@@ -38,7 +38,7 @@ The app uses the following dependencies:
 
 - **SwiftLint:** A linter for Swift to enforce coding style and conventions.
   - [GitHub Repository](https://github.com/realm/SwiftLint)
-- **SwiftFormat:** A code formatter for Swift to maintain a consistent code style.
+- **SwiftFormat:** A code formatter for Swift to maintain a consistent code style. `swiftformat .`
   - [GitHub Repository](https://github.com/nicklockwood/SwiftFormat)
 
 ## Usage

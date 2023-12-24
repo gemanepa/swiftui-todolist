@@ -16,10 +16,6 @@ enum ValidationHelper {
         let trimmedTodo = todoTitle.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !trimmedTodo.isEmpty else { return false }
 
-        // Character Set Check
-        let validCharacterSet = CharacterSet.alphanumerics
-        guard todoTitle.rangeOfCharacter(from: validCharacterSet.inverted) == nil else { return false }
-
         // Duplicate Check
         guard !existingTodos.contains(where: { $0.title == todoTitle }) else { return false }
 

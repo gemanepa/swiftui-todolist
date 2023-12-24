@@ -21,12 +21,21 @@ final class todo_listUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // UI tests must launch the application that they test.
+    func testAddTodo() {
+        // Launch your app
         let app = XCUIApplication()
         app.launch()
 
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        // Enter a todo title in the text field
+        let newTodoTextField = app.textFields["New Todo"]
+        newTodoTextField.tap()
+        newTodoTextField.typeText("Todo")
+
+        // Tap on the "Add" button
+        app.buttons["Add"].tap()
+
+        // Verify that the new todo is added to the list
+        XCTAssertTrue(app.staticTexts["Todo"].exists, "New todo should be visible in the list")
     }
 
     func testLaunchPerformance() throws {
