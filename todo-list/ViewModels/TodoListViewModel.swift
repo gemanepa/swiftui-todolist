@@ -16,6 +16,7 @@ class TodoListViewModel: ObservableObject {
     func addTodo(newTodo: String) {
         print("Adding new todo: \(newTodo)")
 
+        // Validate the new todo
         guard ValidationHelper.isValidTodo(newTodo, existingTodos: todos) else {
             showAlert = true
             alertMessage = "Invalid todo. Please check the requirements."
@@ -24,7 +25,6 @@ class TodoListViewModel: ObservableObject {
         print("Passed validations: \(newTodo)")
 
         // All checks passed, add the new todo
-
         let newTodo = TodoItem(title: newTodo)
         todos.append(newTodo)
     }

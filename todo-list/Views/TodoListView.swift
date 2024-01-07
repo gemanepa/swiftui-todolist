@@ -15,6 +15,7 @@ struct TodoListView: View {
     var body: some View {
         List {
             ForEach(todos) { todo in
+                // Display individual todo items
                 TodoItemView(todo: todo) {
                     toggleCompletion(todo)
                 }

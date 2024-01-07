@@ -15,12 +15,14 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
+                // Display the list of todos
                 TodoListView(
                     todos: viewModel.todos,
                     deleteTodo: viewModel.deleteTodo,
                     toggleCompletion: viewModel.toggleTodoCompletion
                 )
 
+                // Input field to add a new todo
                 TodoInputView(
                     newTodo: $newTodo,
                     addTodo: { title in
@@ -32,6 +34,7 @@ struct ContentView: View {
             .navigationTitle("Todo List")
             .navigationBarTitleDisplayMode(.inline)
             .alert(isPresented: $viewModel.showAlert) {
+                // Display an alert for invalid todos
                 Alert(
                     title: Text("Invalid Todo"),
                     message: Text(viewModel.alertMessage),

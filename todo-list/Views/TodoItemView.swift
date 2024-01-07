@@ -13,6 +13,7 @@ struct TodoItemView: View {
 
     var body: some View {
         HStack {
+            // Display todo title and completion status
             Text(todo.title)
             Spacer()
             Image(systemName: todo.completed ? "checkmark.square.fill" : "square")

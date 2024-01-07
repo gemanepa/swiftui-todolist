@@ -13,10 +13,12 @@ struct TodoInputView: View {
 
     var body: some View {
         HStack {
+            // Input field for new todo
             TextField("New Todo", text: $newTodo)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding(.horizontal)
 
+            // Button to add a new todo
             Button(action: {
                 addTodo(newTodo) // Call the closure with the current newTodo value
             }) {
