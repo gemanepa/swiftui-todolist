@@ -6,11 +6,12 @@
 //
 
 import SwiftUI
+import Observation
 
-class TodoListViewModel: ObservableObject { // iOS >= 17.0 --> @Observable class TodoListViewModel {
-    @Published var todos = [TodoItem]() // iOS >= 17.0 --> var todos = [TodoItem]()
-    @Published var showAlert = false // iOS >= 17.0 --> var showAlert = false
-    @Published var alertMessage = "" // iOS >= 17.0 --> var alertMessage = ""
+@Observable class TodoListViewModel { // iOS < 17.0 --> class TodoListViewModel: ObservableObject {
+    var todos = [TodoItem]() // iOS < 17.0 --> @Published var todos = [TodoItem]()
+    var showAlert = false // iOS < 17.0 --> @Published var showAlert = false
+    var alertMessage = "" // iOS < 17.0 --> @Published var alertMessage = ""
 
     // Function to add a new todo item
     func addTodo(newTodo: String) {
