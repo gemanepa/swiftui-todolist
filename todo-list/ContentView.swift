@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     // Inject the view model into the view
-    @ObservedObject var viewModel: TodoListViewModel
+    @ObservedObject var viewModel: TodoListViewModel // iOS >= 17.0 --> @State var viewModel: TodoListViewModel
     @State private var newTodo = ""
 
     var body: some View {
